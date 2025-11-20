@@ -1,3 +1,4 @@
+/* style.css (FINAL E SEM COMENTÁRIOS) */
 :root {
   --bg: #1C1C1E;
   --card: #2C2C2E;
@@ -18,7 +19,7 @@
 
 body {
   margin: 0;
-  background:  center center fixed;
+  background: url('images/background.png') center center fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--bg);
@@ -414,6 +415,10 @@ footer .wrap {
   .portrait {
     order: -1;
     margin-bottom: 30px;
+  }
+
+  body {
+    background: var(--bg);
   }
 
   .nav {
