@@ -1,9 +1,11 @@
-// app.js (COMPLETO)
 
-// 1. Atualiza o ano no rodapé
+const WHATSAPP_NUMBER = '5585997134248'; 
+const WHATSAPP_MESSAGE = 'Olá, gostaria de agendar uma consulta com a Dra. Helena Carvalho. Visitei o site e busco auxílio jurídico.';
+
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 2. Função para lidar com o envio do formulário de contato (Envia para email)
+
 function handleContactSubmit(e) {
   e.preventDefault();
   const nome = document.getElementById('nome').value.trim();
@@ -15,7 +17,7 @@ function handleContactSubmit(e) {
     return false;
   }
 
-  // Monta o link mailto
+
   const subject = encodeURIComponent('Contato via site — ' + nome);
   const body = encodeURIComponent('Nome: ' + nome + '\nEmail: ' + email + '\n\n' + mensagem);
   window.location.href = `mailto:contato@helenacarvalho.adv.br?subject=${subject}&body=${body}`;
@@ -23,7 +25,18 @@ function handleContactSubmit(e) {
   return false;
 }
 
-// 3. Script para rolagem suave (Smooth Scrolling)
+
+function handleWhatsappClick() {
+  const encodedMessage = encodeURIComponent(WHATSAPP_MESSAGE);
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+  
+  window.open(whatsappUrl, '_blank');
+
+  return false; 
+}
+
+
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (ev) => {
     const id = a.getAttribute('href').slice(1);
