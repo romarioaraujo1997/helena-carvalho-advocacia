@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helena Carvalho Advocacia</title>
+  <meta name="description"
+    content="Escritório de advocacia de Helena Carvalho — atuação ética e estratégica nas áreas civil, família e empresarial." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo">HC</div>
+        <div>
+          <div style="font-weight:700">Helena Carvalho</div>
+          <div style="font-size:13px;color:var(--muted)">Advocacia | Ética • Estratégia • Resultado</div>
+        </div>
+      </div>
+
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="cta" href="#contato">Agende uma Consulta</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-content">
+        <div class="intro">
+          <p class="highlight">Advocacia personalizada</p>
+          <h1>Helena Carvalho — Advocacia Estratégica</h1>
+          <p>Atuação nas áreas civil, família e empresarial com foco em soluções práticas, negociação e defesa técnica.
+            Atendimento humanizado e sigiloso.</p>
+          <div class="actions">
+            <a class="cta" href="#contato">Fale com a equipe</a>
+            <a class="secondary-btn" href="#areas">Nossas Áreas</a>
+          </div>
+
+          <div class="differentiators">
+            <strong>Nossos Diferenciais</strong>
+            <ul>
+              <li>Defesa em ações cíveis e empresariais</li>
+              <li>Atuação em processos de família e sucessões</li>
+              <li>Consultoria preventiva para empresas</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="card portrait">
+          <img id="heroPortrait" src="images/helena 3.jpg" alt="Foto de Helena Carvalho">
+          <h3>Adv.ª Helena Carvalho</h3>
+          <p>OAB 00000 - Especialista em direito civil e empresarial</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="wrap">
+        <div class="card">
+          <h2>Sobre Helena</h2>
+          <p>Helena Carvalho é advogada com mais de 10 anos de experiência, dedicada a oferecer soluções jurídicas
+            efetivas e acompanhamento próximo ao cliente. Seu trabalho combina análise técnica, negociação estratégica e
+            atenção humana.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+      <div class="wrap">
+        <h2>Áreas de Atuação</h2>
+        <div class="grid-3">
+          <div class="service card">
+            <h4>Direito Civil</h4>
+            <p>Ações de responsabilidade civil, indenizações, contratos e cobranças.</p>
+          </div>
+          <div class="service card">
+            <h4>Direito de Família</h4>
+            <p>Divórcios, guarda, inventário, alimentos e mediações familiares.</p>
+          </div>
+          <div class="service card">
+            <h4>Direito Empresarial</h4>
+            <p>Contratos empresariais, compliance, consultoria societária e recuperação.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos">
+      <div class="wrap">
+        <h2>Casos & Resultados</h2>
+        <div class="cases">
+          <article class="case card">
+            <h3>Resolução contratual vantajosa</h3>
+            <p>Atuação em negociação que resultou em acordo favorável para cliente empresarial, preservando negócios e
+              reduzindo riscos.</p>
+          </article>
+          <article class="case card">
+            <h3>Mediação familiar bem sucedida</h3>
+            <p>Mediação que permitiu solução rápida e menos traumática para família, com acordo homologado em juízo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="wrap">
+        <h2>Contato</h2>
+        <div class="card contact-grid">
+          <form id="contactForm" onsubmit="return handleContactSubmit(event)">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+            <div class="submit-btn"><button type="submit">Enviar Mensagem</button></div>
+          </form>
+
+          <aside class="info-box">
+            <h4>Escritório</h4>
+            <p>Av. Exemplo, 123 — Sala 45<br>Fortaleza, CE</p>
+            <h4>Contato</h4>
+            <p>Tel: (85) 9XXXX-XXXX<br>Email: contato@helenacarvalho.adv.br</p>
+            <h4>Horário</h4>
+            <p>Seg — Sex: 9h — 18h</p>
+          </aside>
+        </div>
+        <p class="contact-note">Ou agende diretamente: <a
+            href="mailto:contato@helenacarvalho.adv.br">contato@helenacarvalho.adv.br</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        © <span id="year"></span> Helena Carvalho Advocacia — Todos os direitos reservados
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
